@@ -2,14 +2,11 @@
 =======
 from flask import Flask, request, jsonify
 import os
-import os
 import openai
 
 # Initialize Flask app
 app = Flask(__name__)
 
-# Set your OpenAI API key from environment variable
-openai.api_key = os.getenv("sk-D6EhmIt67gWqzA9F9qQBU1lzdppF2XCYahDyNPHzCBT3BlbkFJhRGWzifSS32gR7rZ1dXzhX2jGbt6hx3t7IHuqIXNEA")
 # Set your OpenAI API key from environment variable
 openai.api_key = os.getenv("sk-D6EhmIt67gWqzA9F9qQBU1lzdppF2XCYahDyNPHzCBT3BlbkFJhRGWzifSS32gR7rZ1dXzhX2jGbt6hx3t7IHuqIXNEA")
 
@@ -35,3 +32,4 @@ def ask():
 if __name__ == "__main__":
     # Use port provided by Heroku or default to 5000 for local development
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+>>>>>>> 5482672 (Updated Flask app to use environment variables and error handling)
