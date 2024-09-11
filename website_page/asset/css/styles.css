@@ -3,8 +3,6 @@
     font-family: 'MxPlusCordataPPC400';
     src: url('WebPlus_Cordata_PPC-400.woff') format('woff'), /* Relative path */
          url('MxPlusCordataPPC-400.ttf') format('truetype'); /* Relative path */
-    src: url('WebPlus_Cordata_PPC-400.woff') format('woff'), /* Relative path */
-         url('MxPlusCordataPPC-400.ttf') format('truetype'); /* Relative path */
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +10,6 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'MxPlusCordataPPC400', monospace; /* Correct custom font family name */
     font-family: 'MxPlusCordataPPC400', monospace; /* Correct custom font family name */
     display: flex;
     justify-content: center;
@@ -25,7 +22,6 @@ body {
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
     cursor: url('png/formicazza_moventina.png') 16 16, auto; /* Custom cursor with hotspot coordinates */
-    cursor: url('png/formicazza_moventina.png') 16 16, auto; /* Custom cursor with hotspot coordinates */
 }
 
 .background {
@@ -35,8 +31,8 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, #4E6B2A 0%, #88A05E 50.5%, #ACC66A 100%),
-                url('png/pattern_camo2.png') center/cover no-repeat;
-    background-blend-mode: difference;
+                url('png/formiche_pattern.png') center/cover no-repeat;
+    background-blend-mode: overlay;
     z-index: -2; /* Behind the overlay */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 0; /* Start hidden for fade-in effect */
@@ -81,14 +77,13 @@ body {
     width: 100%;
     padding: 20px;
     border-radius: 15px;
-    background-blend-mode: hard-light 50%; /* Improved blend mode for better pattern visibility */
+    background-color: #1A1A1A; /* Slightly lighter black for the box */
+    background-image: url('png/pattern_camo.png'); /* Overlay pattern image */
+    background-blend-mode: hard-light; /* Improved blend mode for better pattern visibility */
     background-size: cover; /* Ensure pattern covers the entire box */
     color: #90D64B; /* Text color */
     font-family: 'MxPlusCordataPPC400', monospace; /* Correct custom font family name */
-    border: 1px dashed #8F292B; /* Dashed border for retro feel */
-    box-shadow: inset 0 0 10px #8F292B !important;
-    text-align: center;   
-     font-size: 20px;
+    font-size: 20px;
     line-height: 1.6;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -100,9 +95,7 @@ body {
 
 .chat-box p {
     font-family: 'MxPlusCordataPPC400', monospace; /* Correct custom font family name */
-    font-family: 'MxPlusCordataPPC400', monospace; /* Correct custom font family name */
     margin: 0;
-    font-size: 24px;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.6;
@@ -152,7 +145,6 @@ body {
     animation: moveText 3s linear infinite, flashText 1s infinite alternate;
 }
 
-/* Cursor styling */
 /* Cursor styling */
 .cursor {
     position: absolute;
