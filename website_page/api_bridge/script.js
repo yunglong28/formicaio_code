@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const chatBox = document.getElementById('chatBox');
     const chatMessage = document.getElementById('chatMessage');
     const cursor = document.getElementById('cursor');
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (i < text.length) {
             chatMessage.innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
             typeSound.play();
+            setTimeout(function () {
             setTimeout(function () {
                 typeWriter(text, i + 1, fnCallback);
             }, 50);
@@ -89,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         fadeTransition(() => {
             typeWriter(messages[currentMessageIndex], 0, function () {
+            typeWriter(messages[currentMessageIndex], 0, function () {
                 dingSound.play();
                 chatBox.classList.add('shake');
                 setTimeout(() => {
@@ -132,3 +135,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+

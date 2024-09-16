@@ -44,8 +44,12 @@ body {
     background-blend-mode: difference;
 =======
                 url('png/formiche_pattern.png') center/cover no-repeat;
+<<<<<<< HEAD
     background-blend-mode: overlay;
 >>>>>>> c4500e3 (FORMICAIO_CODE conflict resolution)
+=======
+    background-blend-mode: difference;
+>>>>>>> 89e82a3 (swag)
     z-index: -2; /* Behind the overlay */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 0; /* Start hidden for fade-in effect */
@@ -63,6 +67,7 @@ body {
     background-color: rgb(0, 0, 0); /* Black overlay */
     z-index: -1; /* Covers only the background */
     opacity: 1; /* Fully opaque initially */
+    transition: opacity 1s ease-in-out; /* Smooth fade-out effect */
     transition: opacity 1s ease-in-out; /* Smooth fade-out effect */
 }
 
@@ -111,10 +116,11 @@ body {
 =======
     background-color: #1A1A1A; /* Slightly lighter black for the box */
     background-image: url('png/pattern_camo.png'); /* Overlay pattern image */
-    background-blend-mode: hard-light; /* Improved blend mode for better pattern visibility */
+    background-blend-mode: hard-light 50%; /* Improved blend mode for better pattern visibility */
     background-size: cover; /* Ensure pattern covers the entire box */
     color: #90D64B; /* Text color */
     font-family: 'MxPlusCordataPPC400', monospace; /* Correct custom font family name */
+    border: 2px solid #ff0000; /* Red border for contrast */
     font-size: 20px;
 >>>>>>> c4500e3 (FORMICAIO_CODE conflict resolution)
     line-height: 1.6;
@@ -137,17 +143,23 @@ body {
     white-space: normal;
     word-wrap: break-word;
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: #8F292B; /* Bright green text color */
     animation: flicker 30s infinite alternate; /* Flicker animation */
 
 =======
+=======
+>>>>>>> 89e82a3 (swag)
     color: #90D64B; /* Bright green text color */
     text-shadow: 
         -2px -2px 0 #000, 
         2px -2px 0 #000, 
         -2px 2px 0 #000, 
         2px 2px 0 #000; /* Thicker stroke using multiple shadows */
+<<<<<<< HEAD
 >>>>>>> e5ed417 (swag)
+=======
+>>>>>>> 89e82a3 (swag)
 }
 
 .small-chat-box {
