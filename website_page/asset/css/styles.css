@@ -31,7 +31,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, #4E6B2A 0%, #88A05E 50.5%, #ACC66A 100%),
-                url('png/formiche_pattern.png') center/cover no-repeat;
+                url('png/pattern_camo2.png') center/cover no-repeat;
     background-blend-mode: difference;
     z-index: -2; /* Behind the overlay */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -74,27 +74,21 @@ body {
     width: 100%;
     padding: 20px;
     border-radius: 15px;
-    background-color: #1A1A1A; /* Slightly lighter black for the box */
-    background-image: url('png/pattern_camo.png'); /* Overlay pattern image */
     background-blend-mode: hard-light 50%; /* Improved blend mode for better pattern visibility */
     background-size: cover; /* Ensure pattern covers the entire box */
     color: #90D64B; /* Text color */
     font-family: 'MxPlusCordataPPC400', monospace; /* Correct custom font family name */
-    border: 2px solid #ff0000; /* Red border for contrast */
-    font-size: 20px;
+    border: 1px dashed #8F292B; /* Dashed border for retro feel */
+    box-shadow: inset 0 0 10px #8F292B !important;
+    text-align: center;   
+     font-size: 20px;
     line-height: 1.6;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slightly stronger shadow */
     margin-bottom: 20px;
     box-sizing: border-box;
     overflow: hidden;
     text-align: left;
     transition: opacity 1s ease-in-out;
     opacity: 1;
-    text-shadow: 
-        -1px -1px 0 #000, 
-        1px -1px 0 #000, 
-        -1px 1px 0 #000, 
-        1px 1px 0 #000; /* Additional shadows for thicker stroke effect */
 }
 
 .chat-box p {
@@ -105,12 +99,9 @@ body {
     line-height: 1.6;
     white-space: normal;
     word-wrap: break-word;
-    color: #90D64B; /* Bright green text color */
-    text-shadow: 
-        -2px -2px 0 #000, 
-        2px -2px 0 #000, 
-        -2px 2px 0 #000, 
-        2px 2px 0 #000; /* Thicker stroke using multiple shadows */
+    color: #8F292B; /* Bright green text color */
+    animation: flicker 30s infinite alternate; /* Flicker animation */
+
 }
 
 .small-chat-box {
@@ -122,16 +113,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-size: 18px;
     color: #333333;
-}
-
-.skull-icon {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
-    animation: skullBreath 8s ease-in-out infinite;
 }
 
 .text-container {
@@ -220,4 +201,28 @@ body {
     100% {
         opacity: 0.5;
     }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    5% { opacity: 0.5; }
+    10% { opacity: 1; }
+    15% { opacity: 0.8; }
+    20% { opacity: 0.6; }
+    25% { opacity: 1; }
+    30% { opacity: 0.7; }
+    35% { opacity: 1; }
+    40% { opacity: 0.9; }
+    45% { opacity: 1; }
+    50% { opacity: 0.5; }
+    55% { opacity: 1; }
+    60% { opacity: 0.8; }
+    65% { opacity: 1; }
+    70% { opacity: 0.9; }
+    75% { opacity: 1; }
+    80% { opacity: 0.5; }
+    85% { opacity: 1; }
+    90% { opacity: 0.8; }
+    95% { opacity: 1; }
+    100% { opacity: 0.6; }
 }
