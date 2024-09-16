@@ -112,32 +112,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     if (currentMessageIndex === messages.length) {
                         setTimeout(() => {
-                            fadeTransition(() => {
-                                welcomeMessage.style.transition = 'opacity 1s';
-                                welcomeMessage.style.opacity = '0';
-                                fadeOverlay.style.transition = 'opacity 1s';
-                                fadeOverlay.style.opacity = '0';
-                                background.style.transition = 'opacity 1s';
-                                background.style.opacity = '1';
+                            typeWriter("How do you feel about your work?", 0, function () {
+                                dingSound.play();
+                                chatBox.classList.add('shake');
                                 setTimeout(() => {
-                                    welcomeMessage.style.display = 'none';
-                                    startChatBox.style.display = 'block';
-                                    startChatBox.style.opacity = '0';
-                                    setTimeout(() => {
-                                        startChatBox.style.transition = 'opacity 0.5s';
-                                        startChatBox.style.opacity = '1';
-                                        setTimeout(() => {
-                                            typeWriter("Now it's time for you to talk.", 0, function() {
-                                                dingSound.play();
-                                                chatBox.classList.add('shake');
-                                                setTimeout(() => {
-                                                    chatBox.classList.remove('shake');
-                                                    handleUserInput();  // Start user interaction
-                                                }, 500);
-                                            });
-                                        }, 1000);
-                                    }, 50);
-                                }, 1000);
+                                    chatBox.classList.remove('shake');
+                                    // Fade out the black overlay and reveal the background
+                                    fadeOverlay.style.transition = 'opacity 1s ease-in-out';
+                                    fadeOverlay.style.opacity = '0'; // Fade out the black overlay
+                                    background.style.transition = 'opacity 1.5s ease-in-out';
+                                    background.style.opacity = '1'; // Reveal the background
+                                }, 500);
                             });
                         }, 1000); // Delay before starting the next message
                         }, 1000); // Delay before starting the next message
