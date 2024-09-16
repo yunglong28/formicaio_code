@@ -36,7 +36,6 @@ body {
     width: 450px;
     margin-bottom: 30px;
     animation: flicker 15s infinite alternate; /* Flicker animation */
-
 }
 
 .description-box {
@@ -106,8 +105,34 @@ body {
     width: 250px;
 }
 
-.ant:hover {
-    transform: translateY(-10px) scale(1.1); /* Retro-styled bounce effect */
+
+
+@keyframes sway-left {
+    0% { transform: rotate(-20deg) translateX(0); }
+    50% { transform: rotate(-25deg) translateX(-15px); }
+    100% { transform: rotate(-20deg) translateX(0); }
+}
+
+@keyframes sway-right {
+    0% { transform: rotate(20deg) translateX(0); }
+    50% { transform: rotate(25deg) translateX(15px); }
+    100% { transform: rotate(20deg) translateX(0); }
+}
+
+/* Define keyframes for bobbing motion */
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Apply hover animation to ant-left */
+.ant-left:hover {
+    animation: sway-left 1s infinite alternate, bob 2s infinite;
+}
+
+/* Apply hover animation to ant-right */
+.ant-right:hover {
+    animation: sway-right 1s infinite alternate, bob 2s infinite;
 }
 
 
@@ -135,3 +160,13 @@ body {
     100% { opacity: 0.6; }
 }
 
+
+.footer_text {
+    font-family: 'MxPlusCordataPPC400', monospace; /* Your custom font */
+    color: whites;
+    font-size: 12px;
+    position: fixed; 
+    bottom: 0; 
+    right: 0; 
+    margin: 10px; 
+}
