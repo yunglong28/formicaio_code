@@ -47,8 +47,6 @@ body {
     width: 450px;
     margin-bottom: 30px;
     animation: flicker 15s infinite alternate; /* Flicker animation */
-    animation: flicker 15s infinite alternate; /* Flicker animation */
-
 }
 
 .description-box {
@@ -152,66 +150,6 @@ body {
     transform: rotate(20deg);
     width: 250px;
 }
-
-.ant:hover {
-    transform: translateY(-10px) scale(1.1); /* Retro-styled bounce effect */
-}
-
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    5% { opacity: 0.5; }
-    10% { opacity: 1; }
-    15% { opacity: 0.8; }
-    20% { opacity: 0.6; }
-    25% { opacity: 1; }
-    30% { opacity: 0.7; }
-    35% { opacity: 1; }
-    40% { opacity: 0.9; }
-    45% { opacity: 1; }
-    50% { opacity: 0.5; }
-    55% { opacity: 1; }
-    60% { opacity: 0.8; }
-    65% { opacity: 1; }
-    70% { opacity: 0.9; }
-    75% { opacity: 1; }
-    80% { opacity: 0.5; }
-    85% { opacity: 1; }
-    90% { opacity: 0.8; }
-    95% { opacity: 1; }
-    100% { opacity: 0.6; }
-}
-
-
-.ant:hover {
-    transform: translateY(-10px) scale(1.1); /* Retro-styled bounce effect */
-}
-
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    5% { opacity: 0.5; }
-    10% { opacity: 1; }
-    15% { opacity: 0.8; }
-    20% { opacity: 0.6; }
-    25% { opacity: 1; }
-    30% { opacity: 0.7; }
-    35% { opacity: 1; }
-    40% { opacity: 0.9; }
-    45% { opacity: 1; }
-    50% { opacity: 0.5; }
-    55% { opacity: 1; }
-    60% { opacity: 0.8; }
-    65% { opacity: 1; }
-    70% { opacity: 0.9; }
-    75% { opacity: 1; }
-    80% { opacity: 0.5; }
-    85% { opacity: 1; }
-    90% { opacity: 0.8; }
-    95% { opacity: 1; }
-    100% { opacity: 0.6; }
-}
-
 
 
 
