@@ -10,16 +10,24 @@
     <div id="fadeOverlay"></div>
     <div class="background"></div>
     <div class="container">
+        <!-- Added the welcomeMessage div -->
+        <div class="welcome-message" id="welcomeMessage">
+            <p>Bzz Bzz… Welcome to FORMICAIO.</p>
+        </div>
+        
         <div class="chat-box" id="chatBox">
-            <p id="chatMessage">Bzz Bzz… <br>
+            <p id="chatMessage">Bzz Bzz…</p>
             <div class="cursor" id="cursor"></div> <!-- Pulsating cursor -->
         </div>
+
         <div class="small-chat-box" id="startChatBox" style="display: none;">
             <p>Type here to start the chat</p>
         </div>
     </div>
+
     <audio id="typeSound" src="type.mp3"></audio>
     <audio id="dingSound" src="ding.mp3"></audio>
+    
     <script src="live_agent.js"></script>
 </body>
 </html>

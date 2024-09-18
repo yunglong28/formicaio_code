@@ -18,10 +18,10 @@ def ask():
         if not user_input:
             return jsonify({"response": "No input provided"}), 400
 
-        # Call the OpenAI API
-        response = openai.Completion.create(
-            engine="gpt-3.5-turbo",
-            prompt=user_input,
+        # Call the OpenAI API using the correct method for GPT-3.5-turbo
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": user_input}],
             max_tokens=150
         )
 
