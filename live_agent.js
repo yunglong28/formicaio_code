@@ -11,12 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const messages = [
         "Bzz... Bzz..",
-        "A dissonant whisper brushes against your ear, like it’s drifting in from somewhere distant — just behind you, out of sight. ",
-        "It’s a murmur and a call all at once, threading through your thoughts, making it hard to think straight.",
-        "The sound twists, loops, begins to take shape—a spectral melody winding in on itself. And then, without warning, a voice speaks inside your head.",
         "\"I’m the Agent, the one they sent from the Formicaio.\"",
-        "\"Yeah, I know, it’s probably a strange word to you— It might sound like it’s borrowed from a romance language, but in truth, it doesn’t belong to any single tongue or nation.\"",
-        "Now it's time for you to talk."
     ];
 
     let currentMessageIndex = 0;
@@ -46,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function sendMessageToBackend(message) {
         try {
-            const response = await fetch('https://formicaio-0cf8dce2361a.herokuapp.com/', {
+            const response = await fetch('http://localhost:5000/ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
