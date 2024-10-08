@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="asset/css/styles_landing.css"> <!-- Link to the CSS file -->
-    <link rel="icon" href="asset/css/png/logo_rotondo.png" type="image/png"> <!-- Set the favicon -->
+    <title>FORMICAIO Landing Page</title>
+    <link rel="stylesheet" href="asset/css/styles_landing.css">
 </head>
 <body>
-    <!-- Landing Page Content -->
+    <!-- Main Container -->
     <div class="landing-container">
-        <img src="asset/css/png/formicaio_logo.png" alt="Formicaio Logo" class="formicaio-logo">
+        <!-- FORMICAIO Title -->
+        <div class="title">
+            <img src="asset/css/png/formicaio_logo.png" alt="FORMICAIO" class="formicaio-logo">
+        </div>
+        
+        <!-- Description Box -->
         <div class="description-box">
-            <p class="description-text">REINCANTAMENTO ****proposes a visit to the FORMICAIO, an interactive experience for MacTe centered on the automation of language and work.
-                Within FORMICAIO, visitors will have the opportunity to chat with Agent, a disarming bizarre AI-assistant.</p>
+            <p class="description-text">
+                REINCANTAMENTO ****proposes a visit to the FORMICAIO, an interactive experience for MacTe centered on the automation of language and work.
+                Within FORMICAIO, visitors will have the opportunity to chat with Agent, a disarming bizarre AI-assistant.
+            </p>
         </div>
+        
+        <!-- Start and Tutorial Buttons -->
         <div class="buttons">
-            <a href="index.html" class="start-btn">Start</a>
-            <button class="tutorial-btn">Tutorial</button>
+            <button class="start-btn" onclick="window.location.href='index.html'">start</button>
+            <button class="tutorial-btn">tutorial</button>
         </div>
+        
+        <!-- Decorative Images (Ants) -->
         <img src="asset/css/png/ant_left.png" alt="Ant Left" class="ant ant-left">
         <img src="asset/css/png/ant_right.png" alt="Ant Right" class="ant ant-right">
     </div>
