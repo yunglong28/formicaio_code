@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }, 500);
             });
+            inputField.value = ''; // Clear the input field after sending the message
         }
     }
 
