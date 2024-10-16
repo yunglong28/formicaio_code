@@ -1,4 +1,4 @@
-/* Load the custom font */
+/* Use your custom font */
 @font-face {
     font-family: 'MxPlusCordataPPC400';
     src: url('WebPlus_Cordata_PPC-400.woff') format('woff'), /* Relative path */
@@ -10,8 +10,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'MxPlusCordataPPC400', monospace; /* Use the correct custom font family name */
+    font-family: 'MxPlusCordataPPC400', monospace; /* Your custom font */
     background-color: #000; /* Black background */
+    color: #90D64B; /* Green color for text */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,76 +20,154 @@ body {
     overflow: hidden;
 }
 
+/* Container with retro border */
 .landing-container {
     text-align: center;
-    color: #90D64B; /* Green color for text */
     position: relative;
+    padding: 20px;
+    border: 3px dotted #90D64B; /* Retro-styled dotted border */
+    color: #90D64B; /* Yellowish-orange text color */
+    max-width: 80%;
+    height: 500px;
+    margin: auto;
+    box-shadow: 0 0 10px #90D64B;
 }
 
 .formicaio-logo {
-    width: 450px; /* Increased width for the logo */
-    margin-bottom: 30px;
+    width: 525px;
+    margin: 140px auto 5px auto;
+    animation: flicker 15s infinite alternate; /* Flicker animation */
 }
 
 .description-box {
-    background-color: #fff; /* White box background */
-    color: #000; /* Black text color */
-    padding: 30px; /* Increased padding */
-    margin: 30px auto;
-    width: 70%;
-    max-width: 700px; /* Increased max-width */
-    border-radius: 5px;
+    background-color: #000; /* Match black background */
+    color: #8F292B; /* Retro text color */
+    padding: 15px;
+    margin: 10px auto 15px auto;
+    width: 77%;
+    max-width: 770px;
+    border: 1px dashed #8F292B; /* Dashed border for retro feel */
     text-align: center;
-    font-size: 18px; /* Increased font size */
-    font-weight: bold;
-    line-height: 1.6; /* Adjusted line-height */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Stronger shadow */
-    font-family: 'MxPlusCordataPPC400', monospace; /* Apply custom font to the description box */
+    font-size: 16px; /* Use the existing font size with custom font */
+    font-weight: normal;
+    line-height: 1.4;
+    box-shadow: inset 0 0 10px #8F292B;
+    font-family: 'MxPlusCordataPPC400', monospace; /* Apply custom font */
 }
 
 .description-text {
-    font-family: 'MxPlusCordataPPC400', monospace; /* Ensure custom font is applied */
-    font-size: 18px; /* Set font size */
+    color: #ffff;
+    font-size: 16px;
+    text-shadow: 0 0 5px #90D64B, /* Soft green glow */
+                 0 0 10px #90D64B, /* Larger soft green glow */
+                 0 0 20px #90D64B; /* Even larger soft green glow */
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
+/* Style the buttons to look like retro ASCII terminal elements */
 .start-btn, .tutorial-btn {
-    background-color: #000; /* Black button background */
-    color: #90D64B; /* Green text */
-    border: 2px solid #90D64B;
-    padding: 15px 30px; /* Increased padding */
-    margin: 0 15px; /* Increased margin */
+    display: inline-block;
+    background-color: #000;
+    color: #8F292B;
+    border: 2px solid #8F292B;
+    padding: 15px 30px;
+    margin: 0 15px;
     cursor: pointer;
-    text-transform: lowercase; /* Ensures text is lowercase */
-    font-size: 20px; /* Increased font size */
-    font-family: 'MxPlusCordataPPC400', monospace; /* Apply custom font to buttons */
+    font-size: 14px; /* Smaller font size for retro style */
+    text-transform: lowercase;
+    font-family: 'MxPlusCordataPPC400', monospace; /* Apply custom font */
+    text-decoration: none;
+    text-align: center;
 }
 
 .start-btn:hover, .tutorial-btn:hover {
-    background-color: #90D64B; /* Inverts color on hover */
-    color: #000; /* Black text */
+    background-color: #90D64B;
+    color: #000;
 }
 
+/* ASCII-styled hover effect on ant images */
 .ant {
     position: absolute;
-    width: 200px; /* Increased width for the ant images */
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .ant-left {
-    left: 0;
-    bottom: -5%;
+    left: 12%;
+    bottom: 38%;
     transform: rotate(-20deg);
     width: 300px;
+    
 }
 
 .ant-right {
-    right: 0;
-    top: 15%;
+    right: 18%;
+    top: 5%;
     transform: rotate(20deg);
     width: 250px;
+}
+
+
+
+@keyframes sway-left {
+    0% { transform: rotate(-20deg) translateX(0); }
+    50% { transform: rotate(-25deg) translateX(-15px); }
+    100% { transform: rotate(-20deg) translateX(0); }
+}
+
+@keyframes sway-right {
+    0% { transform: rotate(20deg) translateX(0); }
+    50% { transform: rotate(25deg) translateX(15px); }
+    100% { transform: rotate(20deg) translateX(0); }
+}
+
+/* Define keyframes for bobbing motion */
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Apply hover animation to ant-left */
+.ant-left:hover {
+    animation: sway-left 1s infinite alternate, bob 2s infinite;
+}
+
+/* Apply hover animation to ant-right */
+.ant-right:hover {
+    animation: sway-right 1s infinite alternate, bob 2s infinite;
+}
+
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    5% { opacity: 0.5; }
+    10% { opacity: 1; }
+    15% { opacity: 0.8; }
+    20% { opacity: 0.6; }
+    25% { opacity: 1; }
+    30% { opacity: 0.7; }
+    35% { opacity: 1; }
+    40% { opacity: 0.9; }
+    45% { opacity: 1; }
+    50% { opacity: 0.5; }
+    55% { opacity: 1; }
+    60% { opacity: 0.8; }
+    65% { opacity: 1; }
+    70% { opacity: 0.9; }
+    75% { opacity: 1; }
+    80% { opacity: 0.5; }
+    85% { opacity: 1; }
+    90% { opacity: 0.8; }
+    95% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+
+.footer_text {
+    font-family: 'MxPlusCordataPPC400', monospace; /* Your custom font */
+    color: whites;
+    font-size: 12px;
+    position: fixed; 
+    bottom: 0; 
+    right: 0; 
+    margin: 10px; 
 }

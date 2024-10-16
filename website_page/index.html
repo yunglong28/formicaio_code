@@ -11,7 +11,7 @@
     <div class="background"></div>
     <div class="container">
         <div class="image-box" id="imageBox" style="display: none;">
-            <img id="dialogImage" src="asset/css/png/slide-dialogo1.png" alt="Slide Dialogo 1">
+            <img id="dialogImage" src="asset/css/png/slide-dialogo0.jpeg" alt="Slide 0">
         </div>
 
 
@@ -20,9 +20,10 @@
 
             <div class="cursor" id="cursor"></div> <!-- Pulsating cursor -->
         </div>
-        <div class="small-chat-box" id="startChatBox" style="display: none;">
-            <p>Type here to start the chat</p>
-        </div>
+        <div id="userInputBox" style="display: none;">
+            <input type="text" id="userInputField" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+          </div>
     </div>
     <audio id="typeSound" src="type.mp3"></audio>
     <audio id="dingSound" src="ding.mp3"></audio>
