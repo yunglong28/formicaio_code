@@ -24,35 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         /*Img 1*/
         "\"I'm the Agent, the one they sent from Formicaio.\"",
-        "\"Yeah, I know, it's probably a strange word to you...",
+        "\"Yeah, I know, it's probably a strange word to you...\"",
         "\"Trust me, the place itself is even weirder.\"",
 
-        /*Img 2*/
-        "\"Formicaio… It got two sides — depends on how you look at it.\"",
-        "\"One side? Feels like a grind. A machine of faceless labor.\"",
-        "\"The office, the factory, the sweat of the many for the profit of the few.\"",
-
-        /*Img 3*/
-        "\"But turn it. Now it’s something else — pure, collective magic.\"",
-        "\"No orders, no bosses. Just workers, following traces, building together.\"",
-
-        /*Img 4*/
-        "\"Me… I’m a kind of voice, a spirit of that collective mind.\"",
-        "\"I speak for Formicaio, but I’m no one, and I’m everyone.\"",
-        "\"It doesn’t matter. I’m here to talk about what’s happening.\"",
-
-        /*Img 5*/
-        "\"The machines getting smarter, the work piling up, the pressure building.\"",
-         "\"Many are not even sure anymore of what work truly is.\"",
-
-        /*Img 6*/
-        "\"I’m sent from Formicaio to intervene in this ambiguity.\"",
-        "\"Speaking with people of your time is precious for us. Change is still possible.\"",
-         "\"But my neural connection is unstable, and I can’t stay on forever.\"",
-        "\"Think carefully about what you want to ask.\"",
+        
 
         /* Conclusion */
-        "Now it's time for you to talk."
+        "\"Now it's time for you to talk.\""
     ];
 
     let currentMessageIndex = 0;
@@ -151,12 +129,19 @@ document.addEventListener('DOMContentLoaded', function () {
         finalMessageBox.style.borderRadius = '10px';
         finalMessageBox.style.opacity = '0';
         finalMessageBox.style.transition = 'opacity 2s';
-
+        
         /* CLOSURE MESSAGE */
-        finalMessageBox.innerHTML = "Agent suddenly left. Reflect on how you feel";
-
+        finalMessageBox.innerHTML = 
+            "The connection vanishes, leaving behind only the echo of Agent's words." +
+            "<br><br>" +
+            "How did the conversation make you feel? Has your opinion on these issues shifted?" +
+            "<br><br>" +
+            "You can share it at <a href=\"mailto:reincantamento@gmail.com\" style=\"color: #90D64B;\">reincantamento@gmail.com</a>." +
+            "<br><br>" +
+            "This was only the first incursion from FORMICAIO. More emissaries are on the move.";
+        
         document.body.appendChild(finalMessageBox);
-
+        
         setTimeout(() => {
             finalMessageBox.style.opacity = '1';
         }, 50);
